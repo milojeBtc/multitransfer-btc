@@ -1,0 +1,81 @@
+{
+  "name": "@ordzaar/ord-connect",
+  "version": "0.0.0",
+  "description": "React component library for Bitcoin Ordinals and Sado Protocol Connections",
+  "repository": "https://github.com/ordzaar/ord-connect",
+  "bugs": "https://github.com/ordzaar/ord-connect/issues",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/*",
+    "index.d.ts"
+  ],
+  "types": "./index.d.ts",
+  "main": "./dist/ord-connect.umd.cjs",
+  "module": "./dist/ord-connect.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ord-connect.js",
+      "require": "./dist/ord-connect.umd.cjs"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:watch": "tsc && vite build --watch",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "@magiceden-oss/msigner": "file:src/modules/msigner",
+    "@mempool/mempool.js": "^2.3.0",
+    "@sadoprotocol/ordit-sdk": "2.1.1",
+    "bitcoinjs-lib": "^6.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rpc-bitcoin": "^2.0.0",
+    "sats-connect": "^0.5.0",
+    "tiny-secp256k1": "^2.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-wasm": "^6.2.2",
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.49.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-css-injected-by-js": "^3.3.0",
+    "vite-plugin-dts": "^2.3.0",
+    "vite-plugin-node-polyfills": "^0.11.3"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@mixobitc/msigner": "^1.0.94",
+    "@sadoprotocol/ordit-sdk": "2.1.1",
+    "axios": "^1.5.1",
+    "bitcoinjs-lib": "^6.1.0",
+    "boring-avatars": "^1.10.1",
+    "sats-connect": "^0.5.0"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}

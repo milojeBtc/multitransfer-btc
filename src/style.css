@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  text-align: right;
+  color: white;
+}
+
+
+
+.myButton {
+  background-color: black;
+  border: 1px solid blueviolet;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  top: 50%;
+}
+.myButton:hover{
+  background-color: violet;
+  cursor: pointer;
+  border: 3px;
+}
